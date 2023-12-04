@@ -5,13 +5,20 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "watch": "node server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cd": "^0.3.3",
+    "client": "file:../client",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
-    "mongoose": "^8.0.2"
+    "mongoose": "^8.0.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-router": "6.20.1",
+    "react-router-dom": "6.0.2"
   }
 }
