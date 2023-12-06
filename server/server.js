@@ -1,26 +1,23 @@
-require("dotenv").config()
+require("dotenv").config();
 
-const express = require("express")
+const express = require("express");
 const app = express();
-const db = require("./config/connection"); // import the connection to the database
+const db = require("./config/connection");
 const PORT = process.env.PORT || 3000;
-const router = require("./routes")
 
+// Import routes
+const userRoutes = require("./routes/api/userRoutes");
+const profileRoutes = require("./routes/api/profileRoutes");
 
-// middleware
-app.use(express.json())
-app.use(express.urlencoded({ extended: true }))
+// Middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-// routes
-app.use("/", router)
+// Use routes with their base paths
+app.use("/api/users", userRoutes);
+app.use("/api/profile", profileRoutes);
 
-const userRouter = require("./api/user")
-const profileRouter = require("./api/profile")
-
-app.use("/api/user", userRouter)
-app.use("/api/profile", profileRouter)  // this is the same as app.use("/profile", profileRouter)
-
-// connect to the database and server
+// Connect to the database and server
 db.once('open', () => {
-    app.listen(PORT, () => console.log(`Server is listening port ${PORT}`))
-})
+    app.listen(PORT, () => console.log(`Server is listening on port ${PORT}`));
+});
