@@ -10,6 +10,7 @@ router.use('/api', apiRouter)
 router.use(express.static(path.join(__dirname, '../../client')));
 
 
+
 router.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../../client'));
 });
