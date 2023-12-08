@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { AiOutlineMenu, AiOutlineHome, AiOutlineSearch } from "react-icons/ai";
 import { BsPerson, BsJournalBookmarkFill } from "react-icons/bs";
 import { FaRegCalendarAlt } from "react-icons/fa";
+
 const SideNav = () => {
   const [nav, setNav] = useState(false);
   const handleNav = () => {
