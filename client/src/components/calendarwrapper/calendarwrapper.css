@@ -57,3 +57,7 @@
     background-color: #ffdfa9;
     border-radius: 30px; 
   }
+
+  .react-calendar__tile--active {
+     
+  }
