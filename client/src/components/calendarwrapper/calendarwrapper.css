@@ -27,5 +27,5 @@
   }
   
   .calendarcontainer .react-calendar__tile {
-    
+    transition: transform 0.3s ease;
   }
