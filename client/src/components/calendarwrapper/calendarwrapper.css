@@ -69,5 +69,5 @@
   }
 
   .calendarcontainer .react-calendar__tile:hover {
-    
+    transform: scale(1.4);
   }
