@@ -71,3 +71,7 @@
   .calendarcontainer .react-calendar__tile:hover {
     transform: scale(1.4);
   }
+
+  .calendarcontainer .react-calendar__navigation button:hover {
+    
+  }
