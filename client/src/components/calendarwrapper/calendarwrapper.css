@@ -42,5 +42,6 @@
     color: transparent;
     background: linear-gradient(90deg, transparent, #f0e6e6, transparent);
     background-repeat: no-repeat;
-    
+    background-size: 80% 100%;
+
   }
