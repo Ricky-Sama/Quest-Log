@@ -17,3 +17,6 @@ const CalendarWrapper = () => {
         </div>
       );
     };
+
+
+    export default CalendarWrapper;
