@@ -17,6 +17,7 @@
     animation: fadeIn 1s ease-in-out;
     display: flex; 
     flex-direction: column; 
+    align-items: center;
 
   }
   
