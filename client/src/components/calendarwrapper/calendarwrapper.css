@@ -62,3 +62,7 @@
     animation: pulse 2s infinite;
     background-color: #c26224; 
   }
+  .calendarcontainer .react-calendar__tile:focus {
+   
+    
+  }
