@@ -60,5 +60,5 @@
 
   .react-calendar__tile--active {
     animation: pulse 2s infinite;
-    
+    background-color: #c26224; 
   }
