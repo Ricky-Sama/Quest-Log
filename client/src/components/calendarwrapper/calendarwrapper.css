@@ -38,5 +38,5 @@
     color: black; 
   }
   .calendar-header {
-    
+    position: static;
   }
