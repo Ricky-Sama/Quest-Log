@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { AiOutlineMenu, AiOutlineHome, AiOutlineProject, AiOutlineMail } from "react-icons/ai";
-import { BsPerson } from "react-icons/bs";
-import { GrProjects } from "react-icons/gr";
+import { AiOutlineMenu, AiOutlineHome, AiOutlineSearch } from "react-icons/ai";
+import { BsPerson, BsJournalBookmarkFill } from "react-icons/bs";
+import { FaRegCalendarAlt } from "react-icons/fa";
 const SideNav = () => {
   const [nav, setNav] = useState(false);
   const handleNav = () => {
@@ -33,22 +33,22 @@ const SideNav = () => {
               href="#portfolio" 
               className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
             >
-             <GrProjects size={20}/> 
-             <span >Portfolio</span>
+             <BsJournalBookmarkFill size={20}/> 
+             <span >Logbook</span>
             </a>
             <a onClick={handleNav} 
-              href="#contact" 
+              href="#search" 
               className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
             >
-             <AiOutlineMail size={20}/> 
-             <span >Contact</span>
+             <AiOutlineSearch size={20}/> 
+             <span >Search</span>
             </a>
             <a onClick={handleNav} 
-              href="#resume" 
+              href="#calendar" 
               className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
             >
-             <AiOutlineProject size={20}/> 
-             <span >Resume</span>
+             <FaRegCalendarAlt size={20}/> 
+             <span >Calendar</span>
             </a>
           </div>
         ) : ( ////////////// creates the side nav bar desktop view ////////////////////////////////////////////////////////////////////////////////////////////
@@ -63,14 +63,14 @@ const SideNav = () => {
           <a href="#header" className="rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease_in duration-300">
             <BsPerson size={20} />
           </a>
-          <a href="#portfolio" className="rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease_in duration-300">
-            <GrProjects size={20} />
+          <a href="#logbook" className="rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease_in duration-300">
+            <BsJournalBookmarkFill size={20} />
           </a>
-          <a href="#contact" className="rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease_in duration-300">
-            <AiOutlineMail size={20} />
+          <a href="#search" className="rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease_in duration-300">
+            <AiOutlineSearch size={20} />
           </a>
-          <a href="#resume" className="rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease_in duration-300">
-            <AiOutlineProject size={20} />
+          <a href="#calendar" className="rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease_in duration-300">
+            <FaRegCalendarAlt size={20} />
           </a>
         </div>
       </div>
