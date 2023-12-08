@@ -15,6 +15,7 @@
   
   .calendarcontainer {
     animation: fadeIn 1s ease-in-out;
+    display: flex; 
    
 
   }
