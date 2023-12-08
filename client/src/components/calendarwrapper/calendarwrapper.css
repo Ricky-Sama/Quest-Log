@@ -63,6 +63,7 @@
     background-color: #c26224; 
   }
   .calendarcontainer .react-calendar__tile:focus {
-   
+    transition: background-color 0.3s ease;
+    ; 
     
   }
