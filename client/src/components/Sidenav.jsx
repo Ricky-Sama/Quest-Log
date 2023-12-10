@@ -24,13 +24,12 @@ const SideNav = () => {
              <AiOutlineHome size={20} className="hover:shadow-lg"/> 
              <span >Home</span>
             </Link>
-            <a onClick={handleNav} 
-              href="#header" 
+            <Link to="/profile"
               className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
             >
              <BsPerson size={20}/> 
-             <span >About Me</span>
-            </a>
+             <span >Profile </span>
+            </Link>
             <Link
               to="/Note"
               className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
@@ -69,9 +68,9 @@ const SideNav = () => {
           <Link to="/dashboard" className="rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease_in duration-300">
             <AiOutlineHome size={20} />
           </Link>
-          <a href="#header" className="rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease_in duration-300">
+          <Link to="/profile" className="rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease_in duration-300">
             <BsPerson size={20} />
-          </a>
+          </Link>
           <Link to="/Note" className="rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease_in duration-300">
             <BsJournalBookmarkFill size={20} />
           </Link>

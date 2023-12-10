@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 // Importing components
 import Nav from "../components/Sidenav";
-import QuestBoard from "./quest_board";
+import quest_board from "./quest_board";
 import Note from "./Note";
 import CalandarWrappar from "../components/calendarwrapper/calendarwrapper";
 import desert from "../assets/desert.png";
@@ -44,7 +44,7 @@ function Dashboard() {
         animate={{ opacity: 1 }}
         transition={{ duration: 3 }}
       >
-        <Link to="/QuestBoard">Quest Board</Link>
+        <Link to="/quest_board">Quest Board</Link>
       </motion.button>
       <motion.button
         className="bg-gradient-to-r from-blue-400 to-blue-600 text-white py-2 px-4 rounded"
