@@ -26,6 +26,22 @@ const userSchema = new mongoose.Schema({
     }
 });
 
+// Hash password before saving to database
+userSchema.pre('save', async function (next) {
+    try {
+        const salt = await bcrypt.genSalt(10);
+        this.password = await bcrypt.hash(this.password, salt);
+        next();
+    } catch (error) {
+        next(error);
+    }
+});
+
+// Method to check password validity
+userSchema.methods.isValidPassword = async function (password) {
+    return await bcrypt.compare(password, this.password);
+};
+
 const User = mongoose.model('User', userSchema);
 
 module.exports = User;
