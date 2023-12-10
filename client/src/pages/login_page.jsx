@@ -2,11 +2,12 @@ import { Link } from "react-router-dom";
 import React, { useState } from 'react';
 
 
-function login() {
+function Login() {
+    const navigate = useNavigate();
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [message, setMessage] = useState('');
-    const [emailAdress, setEmailAdress] = useState('');
+    
     
     const handleLogin = async () => {
         const response = await fetch('/api/login', {
@@ -21,6 +22,7 @@ function login() {
         
         if (data.status === 'ok') {
         setMessage('Login successful!');
+        navigate('/dashboard') // redirect to dashboard
         } else {
         setMessage(data.error);
         }
@@ -56,4 +58,4 @@ function login() {
     )
 }
 
-export default login;
+export default Login;
