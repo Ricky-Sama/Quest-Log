@@ -26,7 +26,7 @@ const Card = (props) => {
                 <button className="delete-button rounded-lg px-4 bg-transparent text-white hover:bg-red-600 hover:text-white" onClick={props.onDelete}>x</button>
                 <div className="header">
                     {isEditingHeader ? 
-                        <div>
+                        <div className='flex'>
                             <input type="text" value={header} onChange={(e) => setHeader(e.target.value)} />
                             <button onClick={() => setIsEditingHeader(false)}>Save</button>
                         </div> 

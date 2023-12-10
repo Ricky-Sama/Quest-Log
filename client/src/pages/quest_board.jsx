@@ -8,7 +8,7 @@ function QuestBoard() {
 
   return (
 
-    <div className="min-h-screen bg-cover bg-center flex flex-col" style={{ backgroundImage: `url(${grid})` }}>
+    <div className="min-h-screen bg-cover bg-center flex flex-col bg-sky-100 " style={{ backgroundImage: `url(${grid})` }}>
         <Nav />
       <div className="flex justify-between w-full px-8">
         {title.map((char, index) => (
