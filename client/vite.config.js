@@ -6,7 +6,7 @@ export default defineConfig({
     plugins: [react()],
     build: {
         rollupOptions: {
-          external: ['framer-motion', 'react-icons/fa6'],
+          external: ['framer-motion', 'react-icons/fa6', 'react-icons/ai'],
         },
       },
 });
