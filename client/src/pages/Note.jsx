@@ -4,6 +4,7 @@ import { MdEditNote } from "react-icons/md";
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Nav from "../components/Sidenav";
+import road2 from "../assets/road2.png";
 
 function Note() {
   const [notes, setNotes] = useState([
@@ -65,8 +66,8 @@ function Note() {
   return (
     <div>
         <Nav />
-        <div className='min-h-screen flex flex-col items-center justify-center gap-4 p-4 bg-custom-background bg-center bg-cover'>
-        <div className='bg-gray-100 bg-opacity-70 p-6 rounded-lg shadow-black-300 w-full max-w-lg lg:w-1/4'>
+        <div className='min-h-screen flex flex-col items-center justify-center gap-4 p-4 bg-center bg-cover' style={{ backgroundImage: `url(${road2})` }}>
+        <div className='bg-gray-100 bg-opacity-30 p-6 rounded-lg shadow-black-300 w-full max-w-lg lg:w-1/4'>
             <h1 className='text-3xl font-bold text-center mb-4'>Quest Log</h1>
             <div className='flex flex-col mb-4'>
             <input

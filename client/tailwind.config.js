@@ -5,7 +5,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: (_) => ({
-        'custom-background': "url('/src/assets/Images/Quest-1.jpg')"
+        'custom-background': "url('/src/assets/Images/road2.png')"
       }),
     },
   },
