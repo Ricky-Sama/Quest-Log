@@ -2,6 +2,7 @@ import { useState } from "react";
 import { AiOutlineMenu, AiOutlineHome, AiOutlineSearch } from "react-icons/ai";
 import { BsPerson, BsJournalBookmarkFill } from "react-icons/bs";
 import { FaRegCalendarAlt } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const SideNav = () => {
   const [nav, setNav] = useState(false);
@@ -30,8 +31,8 @@ const SideNav = () => {
              <BsPerson size={20}/> 
              <span >About Me</span>
             </a>
-            <a onClick={handleNav} 
-              href="#portfolio" 
+            <a 
+              onClick={() => handleNav("/Note")}
               className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
             >
              <BsJournalBookmarkFill size={20}/> 

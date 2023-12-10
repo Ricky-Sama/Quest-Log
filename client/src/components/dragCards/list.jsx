@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import Card from './card';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const List = () => {
-    const [cards, setCards] = useState([{title: "Card 1", id: 0}, {title: "Card 2", id: 1}, {title: "Card 3", id: 3}]);
+    const [cards, setCards] = useState([{title: "Card 1", id: 0}]);
     const [newCard, setNewCard] = useState('');
 
     const addCard = () => {
@@ -16,12 +17,36 @@ const List = () => {
     }
     
     return (
-        <div className="list">
-            <div className="add-card-form">
-                <input type="text" value={newCard} className="new-card-input" onChange={(e) => setNewCard(e.target.value)}/>
-                <button onClick={addCard}>New Card</button>
-            </div>
-            {cards.map((card) => <Card title={card.title} key={card.id} onDelete={() => deleteCard(card.id)} />)}
+        <div className="items-center flex">
+          <div className="flex space-x-4 mb-8">
+            <input 
+              type="text" 
+              value={newCard} 
+              onChange={(e) => setNewCard(e.target.value)}
+              className="px-3 py-2 rounded-lg shadow-sm"
+            />
+            <button 
+              onClick={addCard}
+              className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-green"
+            >
+              New Card
+            </button>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <AnimatePresence>
+              {cards.map((card) => (
+                <motion.div
+                  key={card.id}
+                  initial={{ opacity: 0, scale: 0.5 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.5 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <Card title={card.title} key={card.id} onDelete={() => deleteCard(card.id)} />
+                </motion.div>
+              ))}
+            </AnimatePresence>
+          </div>
         </div>
     );
 }
