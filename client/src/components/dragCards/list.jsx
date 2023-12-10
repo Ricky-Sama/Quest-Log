@@ -17,8 +17,8 @@ const List = () => {
     }
     
     return (
-        <div className="items-center flex">
-          <div className="flex space-x-4 mb-8">
+        <div className="items-center flex flex-col py-9 px-9">
+          <div className="flex space-x-4 mb-8 shadow-xl">
             <input 
               type="text" 
               value={newCard} 
@@ -27,7 +27,7 @@ const List = () => {
             />
             <button 
               onClick={addCard}
-              className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-green"
+              className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-green shadow-xl"
             >
               New Card
             </button>
