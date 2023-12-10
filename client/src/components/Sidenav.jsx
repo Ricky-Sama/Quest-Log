@@ -44,13 +44,13 @@ const SideNav = () => {
              <GiAbstract050 size={20}/> 
              <span >Logbook</span>
             </Link>
-            <a onClick={handleNav} 
-              href="#search" 
+            <Link 
+              to="/search" 
               className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
             >
              <AiOutlineSearch size={20}/> 
              <span >Search</span>
-            </a>
+            </Link>
             <a onClick={handleNav} 
               href="#calendar" 
               className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
@@ -78,9 +78,9 @@ const SideNav = () => {
             <GiAbstract050 size={20} />
           </Link>
 
-          <a href="#search" className="rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease_in duration-300">
+          <Link to="/SearchPage"  className="rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease_in duration-300">
             <AiOutlineSearch size={20} />
-          </a>
+          </Link>
           <a href="#calendar" className="rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease_in duration-300">
             <FaRegCalendarAlt size={20} />
           </a>

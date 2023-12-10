@@ -5,6 +5,7 @@ import QuestBoard from './pages/quest_board';
 import Note from './pages/Note';
 import Dashboard from "./pages/dashboard";
 import SideNav from "./components/Sidenav";
+import SearchPage from "./pages/SearchPage";
 import Profile from "./pages/profile";
 import './index.css';
 
@@ -18,6 +19,8 @@ function App() {
       <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/quest_board" element={<QuestBoard />} />
       <Route path="/Note" element={<Note />} />
+      <Route path="/SearchPage" element={<SearchPage />} />
+      
     </Routes>
   );
 }
