@@ -1,6 +1,8 @@
 import { useState } from 'react'; //
 import { FaRegTrashCan } from "react-icons/fa6";
 import { MdEditNote } from "react-icons/md";
+import React from 'react';
+import { Link } from 'react-router-dom;
 
 function Note() {
   const [notes, setNotes] = useState([
