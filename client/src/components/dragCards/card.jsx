@@ -23,7 +23,7 @@ const Card = (props) => {
     return (
         <Draggable>
             <div className="card" style={cardStyle}>
-                <button className="delete-button" onClick={props.onDelete}>x</button>
+                <button className="delete-button rounded-lg px-4 bg-transparent text-white hover:bg-red-600 hover:text-white" onClick={props.onDelete}>x</button>
                 <div className="header">
                     {isEditingHeader ? 
                         <div>

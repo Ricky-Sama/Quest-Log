@@ -2,6 +2,7 @@ import { useState } from "react";
 import { AiOutlineMenu, AiOutlineHome, AiOutlineSearch } from "react-icons/ai";
 import { BsPerson, BsJournalBookmarkFill } from "react-icons/bs";
 import { FaRegCalendarAlt } from "react-icons/fa";
+import { GiAbstract050 } from 'react-icons/gi';
 import { Link } from "react-router-dom";
 
 const SideNav = () => {
@@ -17,13 +18,12 @@ const SideNav = () => {
       {
         nav ? (
           <div className="fixed w-full h-screen bg-white/20 flex flex-col justify-center items-center z-20 bg-custom-background">
-            <a onClick={handleNav} 
-              href="#header" 
+            <Link to="/dashboard"
               className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
             >
              <AiOutlineHome size={20} className="hover:shadow-lg"/> 
              <span >Home</span>
-            </a>
+            </Link>
             <a onClick={handleNav} 
               href="#header" 
               className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
@@ -31,13 +31,20 @@ const SideNav = () => {
              <BsPerson size={20}/> 
              <span >About Me</span>
             </a>
-            <a 
-              onClick={() => handleNav("/Note")}
+            <Link
+              to="/Note"
               className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
             >
              <BsJournalBookmarkFill size={20}/> 
              <span >Logbook</span>
-            </a>
+            </Link>
+            <Link
+              to="/quest_board"
+              className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
+            >
+             <GiAbstract050 size={20}/> 
+             <span >Logbook</span>
+            </Link>
             <a onClick={handleNav} 
               href="#search" 
               className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
@@ -59,15 +66,19 @@ const SideNav = () => {
       }
       <div className="md:block hidden fixed top-[25%] z-10">
         <div className="flex flex-col">
-          <a href="#header" className="rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease_in duration-300">
+          <Link to="/dashboard" className="rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease_in duration-300">
             <AiOutlineHome size={20} />
-          </a>
+          </Link>
           <a href="#header" className="rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease_in duration-300">
             <BsPerson size={20} />
           </a>
-          <a href="#logbook" className="rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease_in duration-300">
+          <Link to="/Note" className="rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease_in duration-300">
             <BsJournalBookmarkFill size={20} />
-          </a>
+          </Link>
+          <Link to="/quest_board" className="rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease_in duration-300">
+            <GiAbstract050 size={20} />
+          </Link>
+
           <a href="#search" className="rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease_in duration-300">
             <AiOutlineSearch size={20} />
           </a>
