@@ -22,6 +22,7 @@ function Login() {
         
         if (data.status === 'ok') {
         setMessage('Login successful!');
+        navigate('/dashboard') // redirect to dashboard
         } else {
         setMessage(data.error);
         }
