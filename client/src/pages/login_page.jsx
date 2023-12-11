@@ -35,8 +35,8 @@ function Login() {
                 <div>
                 <input
                     type="text"
-                    placeholder="Username/Email"
-                    value={username || emailAdress}
+                    placeholder="Username"
+                    value={username}
                     onChange={(e) => setUsername(e.target.value)}
                     className="block w-full px-3 py-2 border border-gray-300 text-gray-900 rounded  focus:ring-yellow-500 focus:border-yellow-500 focus:z-10 sm:text-sm"
                 />
