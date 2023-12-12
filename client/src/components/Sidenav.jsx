@@ -1,8 +1,10 @@
 import { useState } from "react";
-import { AiOutlineMenu, AiOutlineHome, AiOutlineSearch } from "react-icons/ai";
-import { BsPerson, BsJournalBookmarkFill } from "react-icons/bs";
+import { AiOutlineMenu, AiOutlineSearch } from "react-icons/ai";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import { GiAbstract050 } from 'react-icons/gi';
+import { GiGearHammer } from "react-icons/gi";
+import { TbBuildingCottage } from "react-icons/tb";
+import { RiQuillPenFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
 
 const SideNav = () => {
@@ -21,20 +23,20 @@ const SideNav = () => {
             <Link to="/dashboard"
               className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
             >
-             <AiOutlineHome size={20} className="hover:shadow-lg"/> 
+             <TbBuildingCottage size={20} className="hover:shadow-lg"/> 
              <span >Home</span>
             </Link>
             <Link to="/profile"
               className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
             >
-             <BsPerson size={20}/> 
+             <GiGearHammer size={20}/> 
              <span >Profile </span>
             </Link>
             <Link
               to="/Note"
               className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
             >
-             <BsJournalBookmarkFill size={20}/> 
+             <RiQuillPenFill size={20}/> 
              <span >Logbook</span>
             </Link>
             <Link
@@ -66,13 +68,13 @@ const SideNav = () => {
       <div className="md:block hidden fixed top-[25%] z-10">
         <div className="flex flex-col">
           <Link to="/dashboard" className="rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease_in duration-300">
-            <AiOutlineHome size={20} />
+            <TbBuildingCottage size={20} />
           </Link>
           <Link to="/profile" className="rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease_in duration-300">
-            <BsPerson size={20} />
+            <GiGearHammer size={20} />
           </Link>
           <Link to="/Note" className="rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease_in duration-300">
-            <BsJournalBookmarkFill size={20} />
+            <RiQuillPenFill size={20} />
           </Link>
           <Link to="/quest_board" className="rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease_in duration-300">
             <GiAbstract050 size={20} />
