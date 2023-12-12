@@ -17,7 +17,6 @@ function Dashboard() {
   return (
     <div className="min-h-screen bg-cover bg-center flex flex-col" style={{ backgroundImage: `url(${desert})` }}>
       <Nav toggleCalendar={toggleCalendar} />
-      {showCalendar && <CalendarWrapper />}
 
       <div className="flex justify-between w-full px-8 border-b-2 border-blue-600">
         {title.map((char, index) => (
@@ -62,6 +61,8 @@ function Dashboard() {
           Calendar
         </motion.button>
       </div>
+
+      {showCalendar && <CalendarWrapper />} 
     </div>
   );
 }
