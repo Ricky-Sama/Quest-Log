@@ -1,29 +1,19 @@
-
-# Mern Stack Project
+# QUEST-LOG
 
 ## Table of contents
 
-- [General info](#General-Info)
-- [Technologies](#Technologies)
-- [Containers](#Containers)
-- [Deployment](#Deployment)
-- [Code Overview](#Code-Overview)
-- [Summary](#Summary)
-- [CSS style](#CSS-style)
-- [Routing Explained](#Routing-Explained)
-
+* [General-Info](#general-info)
+* [Technologies](#technologies)
+* [Authors](#authors)
+* [License](#license)
 
 ## General-Info
 
-General description here
+The following image shows the web application's appearance and functionality: 
 
-This project utilizes a full MERN stack in order to CRUD data and display it realtime on visualizations. 
+Please click on the [link](https://quest-log-app-9728a203178b.herokuapp.com/) to visit the Quest-Log application.
 
-Deployed link:https://quest-log-app-9728a203178b.herokuapp.com/ 
-
-Landing page 
-
-![Image](assets/landingpage.png)
+![Image](/client/public/Quest-Log%20page.png)
 
 ## Technologies
 
@@ -39,46 +29,13 @@ Project is created with:
 - [Mongoose](https://mongoosejs.com/)
 - [Tailwind](https://tailwindcss.com/)
 
-## Containers
-
-![Image](assets/containers.png)
-
-## Deployment
-
-Download the repository
-
-- Copy the repo
-- In your terminal, cd to the project directory and enter `npm install` to install required dependencies.
-- To run on browser: `npm start`
-- You can also use the heroku-link for a demo:
-- Deployed link: https://quest-log-app-9728a203178b.herokuapp.com/ 
-
-## Code Overview
-
-- Basic overview
-
-## Summary
-
-- This project is a mock-CRM for a start-up/small brewery company. 
-
-## CSS style
-
-- This part we explain the CSS style 
-
-
-## Routing-Explained
-
-- Routing 
-
-![Image](assets/routing.png)
-
 ## Authors
 
-- [Kevin Rice] | Slack name: [Kevin Rice] | Github : [DirtyRice901]
-- [Austin Wilson] | Slack name: [Austin Wilson] | Github : [Devop-A]
-- [Ricardo Scuotto] | Slack name: [Ricardo Scuotto] | Github : [Ricky-Sama]
-- [Jesse Lare] | Slack name: [Jesse Lare] | Github : [SideControlJS]
-- [Shamar Melvin] | Slack name: [shamar melvin] | Github : [DonCod3]
+- [Kevin Rice] | Slack name: [Kevin Rice] | Github : [DirtyRice901](https://github.com/DirtyRice901)
+- [Austin Wilson] | Slack name: [Austin Wilson] | Github : [Devop-A](https://github.com/Devop-A)
+- [Ricardo Scuotto] | Slack name: [Ricardo Scuotto] | Github : [Ricky-Sama](https://github.com/Ricky-Sama)
+- [Jesse Lare] | Slack name: [Jesse Lare] | Github : [SideControlJS](https://github.com/SideControlJS)
+- [Shamar Melvin] | Slack name: [shamar melvin] | Github : [DonCod3](https://github.com/DonCod3)
 
 ## License
 
