@@ -20,7 +20,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/", router)
 
 // Serve static assets in production (We can configure this when we have a build folder)
-// app.use(express.static("client/build"));
+app.use(express.static("client/build"));
 
 // Connect to the database and server
 db.once('open', () => {
