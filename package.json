@@ -34,8 +34,8 @@
     "vite": "^5.0.0"
   },
     "engines": {
-      "node": "16.x",
-      "npm": "8.x"
+      "node": "21.3.0",
+      "npm": "10.2.4"
   },
   "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
   "main": "vite.config.js",
