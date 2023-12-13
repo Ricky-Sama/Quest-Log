@@ -5,6 +5,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Nav from "../components/Sidenav";
 import road2 from "../assets/road2.png";
+import CalendarWrapper from "../components/calendarwrapper/calendarwrapper";
+
 
 function Note() {
   const [notes, setNotes] = useState([
@@ -62,10 +64,17 @@ function Note() {
       setJournalEntries(journalEntries.filter((entry) => entry.id !== id));
     }
   };
+
+  const [showCalendar, setShowCalendar] = useState(false);
+
+  const toggleCalendar = () => {
+    setShowCalendar(!showCalendar);
+  };
+
 ////////////////// tailwindcss styling ////////////////////////////////////////////////////////////////////////////////////////////
   return (
     <div>
-        <Nav />
+        <Nav toggleCalendar={toggleCalendar} />
         <div className='min-h-screen flex flex-col items-center justify-center gap-4 p-4 bg-center bg-cover' style={{ backgroundImage: `url(${road2})` }}>
         <div className='bg-gray-100 bg-opacity-30 p-6 rounded-lg shadow-black-300 w-full max-w-lg lg:w-1/4'>
             <h1 className='text-3xl font-bold text-center mb-4'>Quest Log</h1>
@@ -89,6 +98,7 @@ function Note() {
             >
                 Add Quest Entry
             </button>
+            {showCalendar && <CalendarWrapper />}
             </div>
             <ul>
             {journalEntries.map((entry) => (
@@ -114,7 +124,7 @@ function Note() {
                 </li>
             ))}
             </ul>
-        </div>
+        </div> 
         </div>
     </div>
   );

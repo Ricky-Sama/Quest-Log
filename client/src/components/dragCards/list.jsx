@@ -19,17 +19,11 @@ const List = () => {
     return (
         <div className="items-center flex flex-col py-9 px-9">
           <div className="flex space-x-4 mb-8 shadow-xl">
-            <input 
-              type="text" 
-              value={newCard} 
-              onChange={(e) => setNewCard(e.target.value)}
-              className="px-3 py-2 rounded-lg shadow-sm"
-            />
             <button 
               onClick={addCard}
               className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-green shadow-xl"
             >
-              New Card
+              +
             </button>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">

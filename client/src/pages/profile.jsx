@@ -1,6 +1,8 @@
 import Nav from "../components/Sidenav";
 import { useState } from "react";
 import logging  from '../assets/logging.png';
+import CalendarWrapper from "../components/calendarwrapper/calendarwrapper";
+
 
 function Profile() {
     const [emailAddress, setEmailAddress] = useState("");
@@ -20,9 +22,15 @@ function Profile() {
         }
     };
 
+    const [showCalendar, setShowCalendar] = useState(false);
+
+    const toggleCalendar = () => {
+      setShowCalendar(!showCalendar);
+    };
+
     return (
         <div>
-        <Nav />
+        <Nav toggleCalendar={toggleCalendar}/>
             <div className="h-screen text-white flex items-center justify-center bg-gradient-to-r from-blue-900 to-black" style={{ backgroundImage: `url(${logging})` }}>
             <header className="max-w-md w-full space-y-8 p-10 bg-gray-800 rounded-xl">
                 <h1 className="text-center text-2xl font-extrabold text-gray-200">Profile</h1>
@@ -55,6 +63,7 @@ function Profile() {
                 </div>
                 <button onClick={updateProfile} className="group relative w-full py-2 ox-4 border border-transparent text-sm font-medium rounded-md text-white bg-yellow-600 hover:bg-yellow-800">Update Profile</button>
                 <p className="mt-2 text-center text-sm text-gray-600">{message}</p>
+                {showCalendar && <CalendarWrapper />}
             </header>
             </div>
         </div>
