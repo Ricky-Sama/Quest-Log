@@ -22,7 +22,7 @@ function Login() {
         
         if (data.status === 'ok') {
         setMessage('Login successful!');
-        navigate('/dashboard') // redirect to dashboard
+        navigate('/Dashboard') // redirect to dashboard
         } else {
         setMessage(data.error);
         }
@@ -52,7 +52,7 @@ function Login() {
                 </div>
                 <button onClick={handleLogin} className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-yellow-600 hover:bg-yellow-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500">Login</button>
                 <p className="mt-2 text-center text-sm text-gray-600">{message}</p>
-                <Link to="/register_page">Register</Link>
+                <Link to="/RegisterPage">Register</Link>
             </div>
         </div>
     )
