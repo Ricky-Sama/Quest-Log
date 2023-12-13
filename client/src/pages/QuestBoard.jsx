@@ -1,4 +1,4 @@
-import { motion } from '/framer-motion';
+import { motion } from 'framer-motion';
 import List from '../components/dragCards/list';
 import grid from '../assets/grid.svg';
 import Nav from '../components/Sidenav';

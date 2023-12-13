@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import {  motion } from "/framer-motion";
+import {  motion } from "framer-motion";
 import Nav from "../components/Sidenav";
 import CalendarWrapper from "../components/calendarwrapper/calendarwrapper";
 import desert from "../assets/desert.png";
