@@ -9,14 +9,20 @@ function Register() {
     const [message, setMessage] = useState('');
     
     const handleRegister = async () => {
-        const response = await register(username, password);
+        const response = await fetch('/api/userRoutes', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ username, password })
+        });
         
         const data = await response.json();
 
         if (data.status === 'ok') {
-        setMessage('Registration successful!');
+            setMessage('Registration successful!');
         } else {
-        setMessage(data.error);
+            setMessage(data.error);
         }
     };
     

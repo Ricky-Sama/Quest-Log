@@ -30,7 +30,7 @@ const SideNav = ({ toggleCalendar }) => {
               <TbBuildingCottage size={20} />
               <span>Home</span>
             </Link>
-            <Link to="/profile"
+            <Link to="/Profile"
               className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
             >
               <GiGearHammer size={20} />
@@ -42,7 +42,7 @@ const SideNav = ({ toggleCalendar }) => {
               <RiQuillPenFill size={20} />
               <span>Logbook</span>
             </Link>
-            <Link to="/quest_board"
+            <Link to="/QuestBoard"
               className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
             >
               <GiAbstract050 size={20} />
@@ -65,16 +65,16 @@ const SideNav = ({ toggleCalendar }) => {
       }
       <div className="md:block hidden fixed top-[25%] z-10">
         <div className="flex flex-col">
-          <Link to="/dashboard" className="rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease_in duration-300">
+          <Link to="/Dashboard" className="rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease_in duration-300">
             <TbBuildingCottage size={20} />
           </Link>
-          <Link to="/profile" className="rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease_in duration-300">
+          <Link to="/Profile" className="rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease_in duration-300">
             <GiGearHammer size={20} />
           </Link>
           <Link to="/Note" className="rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease_in duration-300">
             <RiQuillPenFill size={20} />
           </Link>
-          <Link to="/quest_board" className="rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease_in duration-300">
+          <Link to="/QuestBoard" className="rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease_in duration-300">
             <GiAbstract050 size={20} />
           </Link>
           <Link to="/SearchPage" className="rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease_in duration-300">
