@@ -5,12 +5,8 @@ const app = express();
 const db = require("./config/connection");
 const PORT = process.env.PORT || 3000;
 const router = require("./routes");
-const session = require('express-session')
-
-// Import routes
-const userRoutes = require("./routes/api/userRoutes");
-// const profileRoutes = require("./routes/api/profileRoutes");
-
+const session = require('express-session');
+const path = require('path'); // Added to handle paths
 
 // Middleware to parse JSON and urlencoded data
 app.use(express.json());
@@ -20,20 +16,20 @@ app.use(session({
     secret: process.env.SESSION_SECRET, 
     resave: false,
     saveUninitialized: true,
-    cookie: { secure: !!(process.env.NODE_ENV === 'production')}
+    cookie: { secure: process.env.NODE_ENV === 'production' } // Simplified the secure flag
+}));
+
+// Use the main router
+app.use("/", router);
+
+// Serve static assets in production
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static(path.join(__dirname, '../client/build'))); // Corrected the path
+
+    app.get('*', (req, res) => {
+        res.sendFile(path.join(__dirname, '../client/build', 'index.html')); // Serve index.html for all unknown routes
+    });
 }
-));
-
-
-// Authentication middleware
-// app.use("/api/users", userRoutes);
-// app.use("/api/profile", profileRoutes);
-app.use("/", router)
-
-// Serve static assets in production (We can configure this when we have a build folder)
-app.use(express.static("..client/build"));
-// app.use(express.static("../client/dist"));
-
 
 // Connect to the database and server
 db.once('open', () => {
