@@ -8,21 +8,13 @@ const router = require("./routes");
 const session = require('express-session')
 
 // Import routes
-const userRoutes = require("./routes/api/userRoutes");
+// const userRoutes = require("./routes/api/userRoutes");
 // const profileRoutes = require("./routes/api/profileRoutes");
 
 
 // Middleware to parse JSON and urlencoded data
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
-app.use(session({
-    secret: process.env.SESSION_SECRET, 
-    resave: false,
-    saveUninitialized: true,
-    cookie: { secure: !!(process.env.NODE_ENV === 'production')}
-}
-));
 
 
 // Authentication middleware
@@ -34,6 +26,12 @@ app.use("/", router)
 app.use(express.static("..client/build"));
 // app.use(express.static("../client/dist"));
 
+app.use(session({
+    secret: 'Super secret secret', 
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: false, maxAge: 600000 }
+}));
 
 // Connect to the database and server
 db.once('open', () => {
