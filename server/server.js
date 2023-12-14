@@ -31,7 +31,7 @@ app.use(session({
 app.use("/", router)
 
 // Serve static assets in production (We can configure this when we have a build folder)
-// app.use(express.static("..client/build"));
+app.use(express.static("..client/build"));
 // app.use(express.static("../client/dist"));
 
 
