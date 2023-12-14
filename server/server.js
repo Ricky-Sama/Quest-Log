@@ -24,14 +24,15 @@ app.use(session({
 }
 ));
 
-// Serve static assets in production (We can configure this when we have a build folder)
-app.use(express.static("..client/build"));
-// app.use(express.static("../client/dist"));
 
 // Authentication middleware
-app.use("/api/users", userRoutes);
+// app.use("/api/users", userRoutes);
 // app.use("/api/profile", profileRoutes);
 app.use("/", router)
+
+// Serve static assets in production (We can configure this when we have a build folder)
+// app.use(express.static("..client/build"));
+// app.use(express.static("../client/dist"));
 
 
 // Connect to the database and server
