@@ -1,26 +1,28 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import React, { useState } from 'react';
 
 
 function Register() {
-    const [emailAdress, setEmailAdress] = useState('');
+    const navigate = useNavigate();
+    const [email, setEmail] = useState('');
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [message, setMessage] = useState('');
     
     const handleRegister = async () => {
-        const response = await fetch('/api/userRoutes', {
+        const response = await fetch('/api/users', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ username, password })
+            body: JSON.stringify({ username, email, password })
         });
         
         const data = await response.json();
 
         if (data.status === 'ok') {
             setMessage('Registration successful!');
+            navigate('/Dashboard') // redirect to dashboard
         } else {
             setMessage(data.error);
         }
@@ -43,8 +45,8 @@ function Register() {
             <input
                 type="text"
                 placeholder="Email"
-                value={emailAdress}
-                onChange={(e) => setEmailAdress(e.target.value)}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 className="w-full px-3 py-2 border border-gray-300 text-gray-900 rounded focus:outline-none focus:ring-green-500 focus:border-green-500 focus:z-10 sm:text-sm"
             />
             </div>

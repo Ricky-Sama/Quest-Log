@@ -18,9 +18,7 @@ function App() {
       <Route path='/Profile' element={<Profile />} />
       <Route path="/Dashboard" element={<Dashboard />} />
       <Route path="/QuestBoard" element={<QuestBoard />} />
-      <Route path="/Note" element={<Note />} />
-      <Route path="/SearchPage" element={<SearchPage />} />
-      
+      <Route path="/Note" element={<Note />} />      
     </Routes>
   );
 }
