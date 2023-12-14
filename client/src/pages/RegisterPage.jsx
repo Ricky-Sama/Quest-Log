@@ -1,15 +1,16 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import React, { useState } from 'react';
 
 
 function Register() {
+    const navigate = useNavigate();
     const [emailAdress, setEmailAdress] = useState('');
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [message, setMessage] = useState('');
     
     const handleRegister = async () => {
-        const response = await fetch('/api/userRoutes', {
+        const response = await fetch('/api/users', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -21,6 +22,7 @@ function Register() {
 
         if (data.status === 'ok') {
             setMessage('Registration successful!');
+            navigate('/Dashboard') // redirect to dashboard
         } else {
             setMessage(data.error);
         }

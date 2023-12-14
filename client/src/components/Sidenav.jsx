@@ -48,12 +48,6 @@ const SideNav = ({ toggleCalendar }) => {
               <GiAbstract050 size={20} />
               <span>Quest Board</span>
             </Link>
-            <Link to="/search"
-              className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
-            >
-              <AiOutlineSearch size={20} />
-              <span>Search</span>
-            </Link>
             <a onClick={handleCalendarClick}
               className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
             >
@@ -76,9 +70,6 @@ const SideNav = ({ toggleCalendar }) => {
           </Link>
           <Link to="/QuestBoard" className="rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease_in duration-300">
             <GiAbstract050 size={20} />
-          </Link>
-          <Link to="/SearchPage" className="rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease_in duration-300">
-            <AiOutlineSearch size={20} />
           </Link>
           <a onClick={handleCalendarClick} className="rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease_in duration-300">
             <FaRegCalendarAlt size={20} />
