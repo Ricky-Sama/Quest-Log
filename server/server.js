@@ -27,9 +27,10 @@ app.use(express.static("..client/build"));
 // app.use(express.static("../client/dist"));
 
 app.use(session({
-    secret: 'Super secret secret', 
+    secret: process.env.SESSION_SECRET, 
     resave: false,
     saveUninitialized: true,
+    httpOnly: true,
     cookie: { secure: false, maxAge: 600000 }
 }));
 
