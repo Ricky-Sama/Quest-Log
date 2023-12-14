@@ -3,10 +3,5 @@ import react from "@vitejs/plugin-react";
 
 
 export default defineConfig({
-    plugins: [react()],
-    build: {
-        rollupOptions: {
-          external: ['framer-motion','react-icons/fa6', 'react-icons/ai', 'react-icons/bs', 'react-icons/fa', 'react-icons/gi','react-icons/md','react-calendar','react-calendar/dist/Calendar.css','react-icons/tb','react-icons/ri','react-icons/gi'],
-        },
-      },
+    plugins: [react()]
 });
