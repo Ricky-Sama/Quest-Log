@@ -17,9 +17,9 @@ router.get('/', async (req, res) => {
 // Create a new user (with hashed password )
 router.post('/', async (req, res) => {
     try {
-        const { password, ...otherDetails } = req.body;
+        const { password, username, email } = req.body;
         const hashedPassword = await bcrypt.hash(password, 10); // 10 is the salt
-        const newUser = await User.create({ password: hashedPassword, ...otherDetails });
+        const newUser = await User.create({ password: hashedPassword, username, email });
         res.json(newUser);
     } catch (error) {
         res.status(500).json({ error: error.message });
