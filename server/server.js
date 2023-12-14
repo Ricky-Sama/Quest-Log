@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Authentication middleware
-//app.use("/api/users", userRoutes);
+app.use("/api/users", userRoutes);
 // app.use("/api/profile", profileRoutes);
 app.use("/", router)
 
